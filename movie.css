@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #111;
+  --seco: #ddd;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  background: linear-gradient(rgba(0, 0, 0, 0.567) 50%, #1e293b 50%);
+}
+
+.container {
+  width: 90vw;
+  max-width: 37.5em;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  background-color: #1e293b;
+  padding: 3em 1.8em;
+  border-radius: 12px;
+  box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.searchContainer {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1em;
+}
+
+.searchContainer button {
+  background: none;
+  box-shadow: 2.2em 4em 2.3em #00000033;
+  color: var(--seco);
+
+  padding: 0.5em;
+}
+
+.searchContainer button:focus,
+.searchContainer button:hover {
+  /* border-radius: 50%; */
+  animation: anime 1s;
+}
+
+@keyframes anime {
+  0% {
+    border-radius: 10%;
+    background-color: darkblue;
+  }
+  100% {
+    background-color: #00000033;
+    border-radius: 40%;
+  }
+}
+.searchContainer input,
+.searchContainer button {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  outline: none;
+  border-radius: 0.3em;
+  padding-left: 0.8em;
+}
+
+#result {
+  color: #fff;
+}
+
+#result {
+  margin-top: 1.5em;
+  box-shadow: 1px 2px 15px rgba(196, 198, 235, 10.4),
+    1px 2px 4px rgba(0, 0, 0, 10.2);
+}
+
+h3 {
+  font-family: monospace;
+}
+
+.rating img {
+  width: 1.5em;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.ti {
+  gap: 2em;
+  margin-bottom: 1em;
+}
+
+.plot,
+.cast {
+  white-space: none;
+  text-align: justify;
+  justify-content: space-evenly;
+  padding: 1.2em 2.2em;
+  font-weight: 12px;
+  font-family: Poppins;
+  font-weight: 100;
+}
+
+.genre {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.genre div {
+  box-shadow: 1px 2px 0px rgba(196, 198, 235, 10.4),
+    1px 2px 0px rgba(0, 0, 0, 10.2);
+  padding: 0.2em 1.2em;
+  margin: 2em;
+}
+.info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  margin-top: 40%;
+  margin-left: 62%;
+  margin-right: 0%;
+  transform: translate(-50%);
+}
+.poster {
+  width: 100%;
+}
+
+@media screeen and (max-width: 600px) {
+  .container {
+    font-size: 16px;
+  }
+  .poster {
+    margin: auto;
+    width: auto;
+    max-height: 10.8em;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
