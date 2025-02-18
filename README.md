@@ -14,6 +14,7 @@ A sleek and dynamic movie search app that lets you find details about your favor
 - **(Optional)** Backend: Node.js, Express.js  
 
 ## 📦 Installation & Usage  
+![](image.png)
 
 ### 1️⃣ Clone the Repository  
 ```sh
